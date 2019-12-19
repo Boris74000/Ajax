@@ -1,0 +1,17 @@
+section {
+    display: flex;
+}
+#eu {
+    background-color: #75E5F5;
+    flex-basis: 30%;
+}
+
+#as {
+    flex-basis: 30%;
+    background-color: #DBB49F;
+}
+
+#af {
+    flex-basis: 30%;
+    background-color: yellow;
+}
