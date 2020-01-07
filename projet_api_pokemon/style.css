@@ -1,0 +1,52 @@
+body {
+    background-image: url("pokemon2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: whitesmoke;
+}
+
+.logo {
+    text-align: center;
+}
+
+.buttonLoad {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#loadIt {
+  border-radius: 10px;
+  border: 1px outset #2F386A;
+  background-color: #2F386A;
+  color: #FFCE00;
+  height: 50px;
+  text-transform: uppercase;
+}
+
+.pokemon {
+    display: flex;
+    width: 800px;
+    height: 1000px;
+    margin: auto;
+    margin-top: 30px;
+
+}
+.poke {
+    flex-basis: 50%;
+    border: 1px solid #E7EAEC;
+}
+
+.detail {
+    flex-basis: 50%;
+    border: 1px solid #E7EAEC;
+
+}
+
+.para {
+    text-align: center;
+}
+
+.divG {
+    display: flex;
+    justify-content: space-around;
+}
