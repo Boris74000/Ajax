@@ -14,7 +14,8 @@ body {
     margin-top: 30px;
 }
 
-#loadIt {
+
+.loadIt {
   border-radius: 10px;
   border: 1px outset #2F386A;
   background-color: #2F386A;
@@ -49,4 +50,11 @@ body {
 .divG {
     display: flex;
     justify-content: space-around;
+}
+
+.visible {
+    display: inherit;
+}
+.invisible{
+    display: none;
 }
