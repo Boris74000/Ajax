@@ -8,12 +8,12 @@
     <h1>Bieronomy</h1>
 
     <p>Bonjour humble visiteur, et bienvenue sur Bieronomy !<br/>
-        Ce site vous propose de recenser les bières incontournable</p>
+        Ce site vous propose de recenser les bières incontournables</p>
 
     <h2>Utilisation de l'API</h2>
     <p>Cette API vous permettra d'obtenir sous la forme d'un JSON un ensemble d'informations sur les bières.<br/>
         Nom, Pays, Degrés, Amertume, Couleur, Prix.<br/>
-        L'url à utiliser est de la forme suivante "...?param1=value1&param2=value"</p>
+        L'url à utiliser est de la forme suivante "...?param1=value1&ampparam2=value"</p>
 
     <h3>Trier</h3>
     <p>Vous pouvez trier les bières grâce à trois paramètres :</p>
@@ -24,26 +24,31 @@
     </ul>
 
     <h3>Créer</h3>
-    <p>Vous pouvez créer des nouvelles bières grâce à cette URL : "...?param1=value1&param2=value" <br/>
-    Exemple : <br/>
-    nom=Duvel&pays=Belgique&degres=9&amertume=
-        nom :Duvel, Pays: Belgique, Degrés: 9, Amertume: 36, Couleur: Blonde, Prix: 2<br/>
-    </p>
+    <p>Vous pouvez créer des nouvelles bières grâce à cette URL : "...newbeer.php?param1=value1&ampparam2=value2&ampparam3=value3&ampparam4=value4&ampparam5=value5&ampparam6=value6" <br/>
+    	Exemple : <br/>
+    "...newbeer.php?nom=Duvel&amppays=Belgique&ampdegres=9&ampamertume=36&ampcouleur=blonde&ampprix=2"</p>
 
 
     <h3>Modifier</h3>
-    <p>Vous pouvez modifier des bières existantes grâce à cette URL : "...?param1=value1&param2=value" </p>
+    <p>Vous pouvez modifier une bière existante grâce à cette URL : "...update.php?param1=value1&ampparam2=value2&ampparam3=value3&ampparam4=value4&ampparam5=value5&ampparam6=value6"<br/>
+    	Exemple : <br/>
+    "...update.php?nom=Duvel&amppays=Belgique&ampdegres=9&ampamertume=36&ampcouleur=blonde&ampprix=2" </p>
 
 
     <h3>Supprimer</h3>
-    <p>Vous pouvez supprimer des bières grâce à cette URL : "...?param1=value1&param2=value" </p>
+    <p>Vous pouvez supprimer des bières grâce à cette URL : "...deletebiere.php?param1=value1" <br/>
+    	Exemple : <br/>
+    "...deletebiere.php?id=5"</p>
 
 
 
     <h3>Afficher</h3>
-    <p>Vous pouvez afficher des bières grâce à cette URL : "...?param1=value1&param2=value" </p>
+    <p>Vous pouvez afficher la liste des bières avec leurs ID grâce à cette URL : "...bieres.php" </p>
 
-
+    <h3>Selectionner</h3>
+    <p>Vous pouvez selectionner une bière grâce à son ID et afficher son détail grâce à cette URL :"...une biere.php?param1=value1" <br/>
+    	Exemple: <br/>
+    "...une biere.php?id=2"</p>
 
 
 
