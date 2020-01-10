@@ -12,6 +12,8 @@ body {
 .buttonLoad {
     text-align: center;
     margin-top: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -22,6 +24,7 @@ body {
   color: #FFCE00;
   height: 50px;
   text-transform: uppercase;
+  margin-right: 10px;
 }
 
 .pokemon {
@@ -57,4 +60,8 @@ body {
 }
 .invisible{
     display: none;
+}
+
+.divDetail {
+    padding-left: 15px;
 }

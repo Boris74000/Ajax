@@ -12,6 +12,10 @@ img {
 }
 
 button {
+    color: whitesmoke;
+    background-color: black;
+    text-transform: uppercase;
+    border-radius: 5px;
 
 }
 

@@ -24,6 +24,7 @@ function loadPoke() {
                     r = document.createElement("div");
                     r.setAttribute("class", "divG");
 
+                    // Insertion de l'enfant dans le parent
                     p.appendChild(r);
 
                     // Paragraphe qui contient le nom du Pokémon
@@ -33,27 +34,31 @@ function loadPoke() {
                     // Paragraphe qui contient "Voir le détail"
                     e2 = document.createElement("p");
                     e2.innerHTML = "Voir le détail";
+
+                    // Insertion des enfants dans le parent
                     r.appendChild(e);
                     r.appendChild(e2);
+
+                    // Création de l'événement sur "Voir le détail"
                     e2.addEventListener("click", function () {
                         loadDetail(data.results[i].name)
                     });
                 }
-                // Affichage du bouton Suivant
-                b = document.getElementsByClassName("loadIt");
-                b[2].className = "loadIt visible";
-                b[2].addEventListener("click", function () {
-                    nextPoke()
-                });
 
-                // Masquage du bouton Précédent
-                c = document.getElementsByClassName("loadIt");
-                b[0].className = "loadIt invisible";
+                // Affichage du bouton Suivant
+                next= document.getElementsByClassName("loadIt");
+                next[2].className = "loadIt visible";
+
+                // Affichage du bouton Précédent
+                previous = document.getElementsByClassName("loadIt");
+                previous[0].className = "loadIt visible";
 
             }
         )
 }
 
+
+// Fonction qui affiche le détail des pokémons
 function loadDetail(name) {
 
     fetch(`https://pokeapi.co/api/v2/pokemon/${name}/`)
@@ -94,14 +99,34 @@ function loadDetail(name) {
                 e5 = document.createElement("img");
                 e4.innerHTML = 'IMAGE : <img src="'+data.sprites.front_shiny+'" alt="Photo du Pokémon">'
                 d.appendChild(e4);
-
-
             }
         )
 }
 
+// Creation de la variable qui contient le numéro de page
+page = 0;
+
+// Creation de l'événement sur le bouton suivant
+next = document.getElementsByClassName("loadIt");
+next[2].addEventListener("click", function () {
+    page += 20;
+    nextPoke()
+});
+
+// Création de l'événement sur le bouton précédent
+previous = document.getElementsByClassName("loadIt");
+previous[0].addEventListener("click", function () {
+    page -= 20;
+    if (page < 0) {
+        page = 0
+    } else {
+        nextPoke()
+    }
+});
+
+// Fonction qui modifie la page
 function nextPoke() {
-    fetch('https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20')
+    fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${page}&limit=20`)
 
         .then(
             function (response) {
@@ -128,28 +153,21 @@ function nextPoke() {
                     // Paragraphe qui contient "Voir le détail"
                     e2 = document.createElement("p")
                     e2.innerHTML = "Voir le détail"
+
                     r.appendChild(e);
                     r.appendChild(e2);
                     e2.addEventListener("click", function () {
                         loadDetail(data.results[i].name)
                     });
                 }
-                // Affichage du bouton Précédent
-                b = document.getElementsByClassName("loadIt");
-                b[0].className = "loadIt visible";
-                // Variable pour incrementer le numéro de page
-
-                b[0].addEventListener("click", function () {
-                    page -= 20
-                    previousPoke()
-                });
-
 
             }
         )
 }
 
+/*
 function previousPoke() {
+
     fetch('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20')
         .then(
             function (response) {
@@ -185,3 +203,4 @@ function previousPoke() {
             }
         )
 }
+*/
