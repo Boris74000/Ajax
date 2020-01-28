@@ -1,7 +1,6 @@
 body {
     background-image: url("pokemon2.jpg");
     background-size: cover;
-    background-attachment: fixed;
     color: whitesmoke;
 }
 
